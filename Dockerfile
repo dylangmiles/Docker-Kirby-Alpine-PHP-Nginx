@@ -2,8 +2,9 @@ FROM nginx:alpine
 MAINTAINER Zac Duncan-Lee <zac@thesinkingship.com.au>
 RUN echo "@testing http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     apk update && \
-    apk upgrade && \
-    apk add php-fpm php-curl php-dom php-openssl php-xml php-json && \
+    apk upgrade
+
+RUN apk add php5-fpm php5-curl php5-dom php5-openssl php5-xml php5-json && \
     rm -rf /var/cache/apk/* && \
     mkdir /app
 

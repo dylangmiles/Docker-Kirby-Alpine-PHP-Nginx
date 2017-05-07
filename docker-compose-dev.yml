@@ -1,0 +1,4 @@
+web:
+  image: dylangmiles/docker-kirby-alpine-php-nginx
+  environment:
+      - VIRTUAL_HOST=docker-kirby-alpine-php-nginx.local
